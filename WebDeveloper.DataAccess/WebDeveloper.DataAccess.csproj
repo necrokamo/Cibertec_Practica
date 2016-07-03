@@ -50,6 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoriesData.cs" />
+    <Compile Include="CustomersData.cs" />
+    <Compile Include="EmployeesData.cs" />
+    <Compile Include="OrdersData.cs" />
+    <Compile Include="ProductsData.cs" />
     <Compile Include="WDataAccess.cs" />
     <Compile Include="DataBaseAcess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
