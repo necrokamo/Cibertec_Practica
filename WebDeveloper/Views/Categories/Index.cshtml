@@ -1,7 +1,41 @@
-﻿
+﻿@model IEnumerable<WebDeveloper.Model.Categories>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Categories";
 }
 
-<h2>Index</h2>
+<h2>Categories</h2>
+<div>
+    @Html.ActionLink("New Category", "Create")
+</div>
+<div>
+    <table>
+        <tr>
+            <th>
+                CategoryID
+            </th>
+            <th>
+                CategoryName
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Picture
+            </th>
+        </tr>
+        @foreach(var categories in Model)
+        {
+            <tr>
+                <td>@categories.CategoryID</td>
+                <td>@categories.CategoryName </td>
+                <td>@categories.Description </td>
+                <td>@categories.Picture </td>
 
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = categories.CategoryID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = categories.CategoryID })
+                </td>
+            </tr>
+        }
+    </table>
+</div>
